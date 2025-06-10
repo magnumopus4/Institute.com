@@ -1,0 +1,90 @@
+/* General Styles */
+body {
+    background: url('image2.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+section[id] {
+    scroll-margin-top: 80px; /* Offset for sticky navbar */
+}
+
+.hero-overlay {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1516321318423-f06f85e348b8') no-repeat center center/cover;
+    background-size: cover;
+}
+
+/* Navigation Link Hover Effect */
+nav ul li a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #93c5fd; /* Tailwind's blue-300 */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #93c5fd;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Upload Section */
+#upload form {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+#upload input, #upload select {
+    transition: border-color 0.3s ease;
+}
+
+#upload input:focus, #upload select:focus {
+    border-color: #1e40af; /* Tailwind's blue-700 */
+    outline: none;
+}
+
+#upload button {
+    transition: background-color 0.3s ease;
+}
+
+/* Result Section */
+#fileList li {
+    transition: background-color 0.3s ease;
+}
+
+#fileList li:hover {
+    background-color: #f0f2f5; /* Tailwind's gray-100 */
+}
+
+/* Hero Section Animation on Page Load */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes lightFlash {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.animate-light-flash {
+    animation: lightFlash 1s ease-out forwards;
+}

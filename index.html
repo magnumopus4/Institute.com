@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnum Opus Institute</title>
+    <link rel="shortcut icon" href="image.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-inter text-gray-800 bg-gray-50">
+    <!-- Lighting Effect Overlay -->
+    <div id="lighting-overlay" class="fixed inset-0 bg-white z-50 animate-light-flash"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-40 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="image.png" alt="Logo" class="w-8 h-8 rounded-full">
+                <h1 class="text-xl font-bold">Magnum Opus</h1>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <ul id="nav-menu" class="hidden md:flex md:space-x-6 md:items-center">
+                <li><a href="#home" class="hover:text-blue-200 transition">Home</a></li>
+                <li><a href="#courses" class="hover:text-blue-200 transition">Courses</a></li>
+                <li><a href="#teachers" class="hover:text-blue-200 transition">Teachers</a></li>
+                <li><a href="Result.html" class="hover:text-blue-200 transition">Result</a></li>
+                <li><a href="javascript:void(0);" class="hover:text-blue-200 transition" onclick="showContact()">Contact</a></li>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=61577130231288&mibextid=ZbWKwL" target="_blank" class="hover:text-blue-200 transition" title="Facebook">
+                        <svg class="inline w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/@magnumopustf?si=F8MtaguZmXgbQPv9" target="_blank" class="hover:text-blue-200 transition" title="YouTube">
+                        <svg class="inline w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.498 6.186a2.993 2.993 0 0 0-2.107-2.117C19.413 3.5 12 3.5 12 3.5s-7.413 0-9.391.569A2.993 2.993 0 0 0 .502 6.186C0 8.163 0 12 0 12s0 3.837.502 5.814a2.993 2.993 0 0 0 2.107 2.117C4.587 20.5 12 20.5 12 20.5s7.413 0 9.391-.569a2.993 2.993 0 0 0 2.107-2.117C24 15.837 24 12 24 12s0-3.837-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+    class="relative text-white min-h-[663px] min-w-[5px] flex items-center bg-cover bg- right-2.5 w-full"
+    style="background-image: url('image6.jpg'); background-position: top right;">
+    <div class="absolute inset-0 bg-black opacity-30"></div>
+    <div class="container mx-auto text-center relative z-1 px-11">
+        <p id="typewriter" class="font-bold text-base sm:text-lg md:text-xl mt-[-8px] mb-4 max-w-lg mx-auto text-black-500"></p>
+       
+    </div>
+</section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-12 bg-blue-100 transition-all duration-700 transform">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-6">Our Courses</h2>
+            <div class="grid grid-cols-1 gap-4 sm:gap-6">
+                <div id="jee-card" class="bg-light bg-green-100 p-5 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer" onclick="showFee('jee-fee-info')">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-3">JEE Preparation + 11 & 12</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">Comprehensive coaching for JEE Main and Advanced with expert faculty and personalized guidance.</p>
+                    <button class="mt-3 px-4 py-1 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700 transition" type="button">
+                        Click to view fee
+                    </button>
+                    <div id="jee-fee-info" class="mt-4 text-green-700 font-bold hidden">
+                        Price: ₹2000 per month
+                    </div>
+                </div>
+                <div id="neet-card" class="bg-light bg-pink-100 p-5 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer" onclick="showFee('neet-fee-info')">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-3">NEET Preparation + 11 & 12 </h3>
+                    <p class="text-gray-600 text-sm sm:text-base">Focused training for NEET aspirants with rigorous practice and in-depth study materials.</p>
+                    <button class="mt-3 px-4 py-1 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700 transition" type="button">
+                        Click to view fee
+                    </button>
+                    <div id="neet-fee-info" class="mt-4 text-green-700 font-bold hidden">
+                        Price: ₹2000 per month
+                    </div>
+                </div>
+                <div id="class910-card" class="bg-violet-100 p-5 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer" onclick="showFee('fee-info')">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-3">Classes 9-10</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">Academic excellence for CBSE, ICSE, and JAC boards with a strong foundation for competitive exams.</p>
+                    <button class="mt-3 px-4 py-1 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700 transition" type="button">
+                        Click to view fee
+                    </button>
+                    <div id="fee-info" class="mt-4 text-green-700 font-bold hidden">
+                        Price for whole year: ₹3999
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section id="teachers" class="py-12 bg-drak sky bg-blue-50 transition-all duration-700 transform">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-6">Our Expert Faculty</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition">
+                    <img src="image3.png" alt="Deepak Jha" class="w-20 h-20 mx-auto rounded-full mb-3 object-cover">
+                    <h3 class="text-base sm:text-lg font-semibold mb-2">Deepak Jha</h3>
+                    <p class="text-blue-600 font-medium mb-2 text-sm">Physics (JEE & NEET)</p>
+                    <p class="text-gray-600 mb-2 text-sm">M.Sc., B.Ed.</p>
+                    <p class="text-gray-600 text-sm">With over 15 years of experience, Mr. Deepak Jha specializes in making complex physics concepts accessible.</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition">
+                    <img src="image4.png" alt="Vidhan Singh" class="w-20 h-20 mx-auto rounded-full mb-3 object-cover">
+                    <h3 class="text-base sm:text-lg font-semibold mb-2">Vidhan Singh</h3>
+                    <p class="text-blue-600 font-medium mb-2 text-sm">Chemistry (JEE & NEET)</p>
+                    <p class="text-gray-600 mb-2 text-sm">M.Sc.</p>
+                    <p class="text-gray-600 text-sm">Vidhan Singh’s engaging teaching style has guided countless students to top ranks in competitive exams.</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition">
+                    <img src="image5.png" alt="Dashrath Nishad" class="w-20 h-20 mx-auto rounded-full mb-3 object-cover">
+                    <h3 class="text-base sm:text-lg font-semibold mb-2">Dashrath Nishad</h3>
+                    <p class="text-blue-600 font-medium mb-2 text-sm">Mathematics (Classes 9-12, JEE)</p>
+                    <p class="text-gray-600 mb-2 text-sm">B.Sc. Mathematics</p>
+                    <p class="text-gray-600 text-sm">Mr. Dashrath’s structured approach builds a strong foundation for board and competitive exams.</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition">
+                    <h3 class="text-base sm:text-lg font-semibold mb-2">Dr. U.K Paul</h3>
+                    <p class="text-blue-600 font-medium mb-2 text-sm">Biology (Classes 9-12, NEET)</p>
+                    <p class="text-gray-600 mb-2 text-sm">M.Sc., Ph.D.</p>
+                    <p class="text-gray-600 text-sm">Dr. Paul’s structured approach builds a strong foundation for CBSE, ICSE, and NEET aspirants.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-6">
+        <div class="container mx-auto text-center px-4">
+            <p class="mb-3 text-sm">© 2025 Magnum Opus Institute. All rights reserved.</p>
+            <p class="mb-3 text-sm">
+    Contact us:
+    <a href="mailto:dkjha.physics@gmail.com" class="hover:text-blue-200">dkjha.physics@gmail.com</a>
+    | <a href="tel:+918271250067" class="hover:text-blue-200">+91 82712 50067</a>
+</p>
+            <p class="mb-3 text-sm">Address: Panchgari Bazar, Near Rajesthani Dhramsal (Dhanbad)</p>
+            <div class="flex justify-center space-x-4">
+                <a href="https://www.facebook.com/profile.php?id=61577130231288&mibextid=ZbWKwL" target="_blank" class="hover:text-blue-200">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/>
+                    </svg>
+                </a>
+                <a href="https://youtube.com/@magnumopustf?si=F8MtaguZmXgbQPv9" target="_blank" class="hover:text-blue-200">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.498 6.186a2.993 2.993 0 0 0-2.107-2.117C19.413 3.5 12 3.5 12 3.5s-7.413 0-9.391.569A2.993 2.993 0 0 0 .502 6.186C0 8.163 0 12 0 12s0 3.837.502 5.814a2.993 2.993 0 0 0 2.107 2.117C4.587 20.5 12 20.5 12 20.5s7.413 0 9.391-.569a2.993 2.993 0 0 0 2.107-2.117C24 15.837 24 12 24 12s0-3.837-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Popup -->
+    <div id="contact-number" class="fixed bottom-4 right-4 bg-blue-900 text-white px-4 py-2 rounded-lg shadow-lg text-sm hidden z-50">
+        Call us: <a href="tel:+918271250067">+91 82712 50067</a>
+        <button onclick="hideContact()" class="ml-3 text-blue-200 hover:text-white">×</button>
+    </div>
+
+    <!-- Loader Overlay -->
+<div id="custom-loader" class="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-orange-200 via-white to-green-400 z-[9999] transition-opacity duration-500">
+    <div class="flex flex-col items-center">
+        <img src="image.png" alt="Magnum Opus Logo" class="w-24 h-24 mb-4 animate-bounce drop-shadow-xl" />
+        <span class="text-xl font-bold text-blue-900 animate-pulse">Loading...</span>
+    </div>
+</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lighting overlay ko 1s baad hatao
+            setTimeout(() => {
+                const overlay = document.getElementById('lighting-overlay');
+                if (overlay) overlay.style.display = 'none';
+            }, 500);
+
+            // Custom loader ko 3s baad hatao
+            setTimeout(() => {
+                const loader = document.getElementById('custom-loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.style.display = 'none', 500); // fade out
+                }
+            }, 2500);
+
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('hidden');
+            });
+        });
+
+        function showContact() {
+            document.getElementById('contact-number').classList.remove('hidden');
+        }
+
+        function hideContact() {
+            document.getElementById('contact-number').classList.add('hidden');
+        }
+
+        function animateSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.classList.remove('translate-y-20', 'opacity-0');
+                section.classList.add('translate-y-0', 'opacity-100');
+                // Scroll to section smoothly
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Menu links ke liye event listener
+        document.querySelector('a[href="#courses"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            animateSection('courses');
+        });
+        document.querySelector('a[href="#teachers"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            animateSection('teachers');
+        });
+
+        // Typewriter effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const text = "Empowering students for JEE, NEET, and CBSE, ICSE, JAC Boards (Classes 9-12)";
+            const typewriter = document.getElementById('typewriter');
+            let i = 0;
+            typewriter.textContent = ""; // <-- Add this line to clear previous text
+            function type() {
+                if (i < text.length) {
+                    typewriter.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, 85); // speed
+                }
+            }
+            type();
+        });
+
+        function showFee(feeId) {
+            const feeDiv = document.getElementById(feeId);
+            if (feeDiv.classList.contains('hidden')) {
+                feeDiv.classList.remove('hidden');
+            } else {
+                feeDiv.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
+
