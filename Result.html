@@ -7,10 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-blue-100 via-white to-green-100">
-    <div class="container mx-auto py-16 text-center bg-white bg-opacity-90 rounded-2xl mt-24 shadow-xl flex items-center justify-center gap-8">
+    <div class="container mx-auto py-16 text-center bg-white bg-opacity-90 rounded-2xl mt-24 shadow-xl flex items-center justify-center gap-8 group transition duration-300 hover:bg-gradient-to-r hover:from-blue-100 hover:via-white hover:to-green-100 hover:shadow-2xl">
         <div class="w-1/3">
             <img src="image.png" alt="Magnum Opus Logo" class="mx-auto mb-4 w-16 h-16 rounded-2xl shadow-lg">
-            <h1 class="text-4xl font-bold text-blue-800 drop-shadow">Magnum Opus Institute</h1>
+            <h1 class="text-4xl font-bold text-blue-800 drop-shadow hover:underline hover:text-blue-600 transition duration-200 cursor-pointer">Magnum Opus Institute</h1>
             <p class="text-gray-700 mt-4">Empowering Students for a Brighter Future</p>
         </div>
         <div class="w-2/3">
@@ -24,31 +24,121 @@
             <h2 class="text-3xl font-bold mb-10 text-blue-800 drop-shadow">Our Results (2024-25)</h2>
             <div class="max-w-xl mx-auto space-y-8">
                 <!-- JEE Advance -->
-                <div class="bg-white bg-opacity-90 rounded-xl shadow-lg p-8 flex items-center gap-6 border-l-8 border-blue-300">
-                    <div class="text-left">
-                        <h3 class="text-xl font-semibold text-blue-900 mb-2">JEE Advance (2024-25)</h3>
-                        <p class="text-gray-700">Rahul Kumar <span class="font-bold text-green-700">AIR - 722</span></p>
+                <div class="bg-gradient-to-r from-blue-100 via-white to-green-100 rounded-2xl shadow-2xl p-8 flex items-center gap-8 border-l-8 border-blue-400 hover:shadow-blue-300 transition-shadow duration-500">
+                    <div class="relative">
+                        <img src="image2.png" alt="Rahul Kumar"
+                             class="w-30 h-30 rounded-full object-cover border-4 border-blue-400 shadow-lg ring-4 ring-blue-100 transition-transform duration-300 hover:scale-105 bg-white" 
+                             style="object-position: top;">
+                        <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs px-3 py-1 rounded-full shadow font-semibold tracking-wide">JEE ADVANCE</span>
+                        <span class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-blue-700 text-white text-xs px-3 py-1 rounded-full shadow font-semibold tracking-wide">Katras Topper</span>
+                    </div>
+                    <div class="text-left flex-1">
+                        <h3 class="text-2xl font-extrabold text-blue-900 mb-1 drop-shadow">Rahul Kumar</h3>
+                        <p class="text-lg text-gray-700 mb-2">AIR <span class="font-bold text-green-700 text-xl align-middle">722</span> <span class="text-sm text-gray-500">(2024-25)</span></p>
+                        <div class="flex items-center gap-2 mt-2">
+                            <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+                            <span class="text-blue-700 font-semibold">Congratulations on cracking JEE Advanced!</span>
+                        </div>
                     </div>
                 </div>
                 <!-- JEE Mains -->
-                <div class="bg-white bg-opacity-90 rounded-xl shadow-lg p-8 flex items-center gap-6 border-l-8 border-yellow-300">
-                    <div class="text-left">
-                        <h3 class="text-xl font-semibold text-yellow-800 mb-2">JEE Mains (2024-25)</h3>
-                        <p class="text-gray-700">Varsha Rani <span class="font-bold text-green-700">91 %ile</span></p>
+                <div class="bg-gradient-to-r from-yellow-100 via-white to-yellow-50 rounded-2xl shadow-2xl p-8 flex flex-col gap-6 border-l-8 border-yellow-400 hover:shadow-yellow-200 transition-shadow duration-500">
+                    <!-- Mohit Kumar -->
+                    <div class="flex items-center gap-8">
+                        <div class="relative">
+                            <img src="image8.jpg" alt="Mohit Kumar"
+                                class="w-23 h-23 rounded-full object-cover border-4 border-yellow-400 shadow-lg ring-4 ring-yellow-100 transition-transform duration-300 hover:scale-105 bg-white"
+                                style="object-position: top center;">
+                            <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-yellow-500 text-white text-[9px] px-1.5 py-0.5 rounded-full shadow font-semibold tracking-wide">JEE MAINS</span>
+                        </div>
+                        <div class="text-left flex-1">
+                            <h3 class="text-2xl font-extrabold text-yellow-800 mb-1 drop-shadow">Mohit Kumar</h3>
+                            <p class="text-lg text-gray-700 mb-2">97.3 <span class="font-bold text-green-700 text-xl align-middle">%ile</span> <span class="text-sm text-gray-500">(2024-25)</span></p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+                                <span class="text-yellow-700 font-semibold">Excellent performance in JEE Mains!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Payal Kumari -->
+                    <div class="flex items-center gap-8 mt-6">
+                        <div class="relative">
+                            <img src="image9.jpg" alt="Payal Kumari"
+                                class="w-24 h-24 rounded-full object-cover border-4 border-yellow-400 shadow-lg ring-4 ring-yellow-100 transition-transform duration-300 hover:scale-105 bg-white"
+                                style="object-position: top center;">
+                            <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-yellow-500 text-white text-[9px] px-1.5 py-0.5 rounded-full shadow font-semibold tracking-wide">JEE MAINS</span>
+                        </div>
+                        <div class="text-left flex-1">
+                            <h3 class="text-2xl font-extrabold text-yellow-800 mb-1 drop-shadow">Payal Kumari</h3>
+                            <p class="text-lg text-gray-700 mb-2">94.15 <span class="font-bold text-green-700 text-xl align-middle">%ile</span> <span class="text-sm text-gray-500">(2024-25)</span></p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+                                <span class="text-yellow-700 font-semibold">Great job, Payal!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Varsha Rani -->
+                    <div class="flex items-center gap-8 mt-6">
+                        <div class="relative">
+                            <img src="image10.jpg" alt="Varsha Rani"
+                                class="w-24 h-24 rounded-full object-cover border-4 border-yellow-400 shadow-lg ring-4 ring-yellow-100 transition-transform duration-300 hover:scale-105 bg-white"
+                                style="object-position: top center;">
+                            <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-yellow-500 text-white text-[9px] px-1.5 py-0.5 rounded-full shadow font-semibold tracking-wide">JEE MAINS</span>
+                        </div>
+                        <div class="text-left flex-1">
+                            <h3 class="text-2xl font-extrabold text-yellow-800 mb-1 drop-shadow">Varsa Rani</h3>
+                            <p class="text-lg text-gray-700 mb-2">91.16 <span class="font-bold text-green-700 text-xl align-middle">%ile</span> <span class="text-sm text-gray-500">(2024-25)</span></p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+                                <span class="text-yellow-700 font-semibold">Well done, Varsha!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ankit Singh -->
+                    <div class="flex items-center gap-8 mt-6">
+                        <div class="relative">
+                            <img src="image11.jpg" alt="Ankit Singh"
+                                class="w-28 h-28 rounded-full object-cover border-4 border-yellow-400 shadow-lg ring-4 ring-yellow-100 transition-transform duration-300 hover:scale-105 bg-white"
+                                style="object-position: 50% 20%;">
+                            <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-yellow-500 text-white text-[9px] px-1.5 py-0.5 rounded-full shadow font-semibold tracking-wide">JEE MAINS</span>
+                        </div>
+                        <div class="text-left flex-1">
+                            <h3 class="text-2xl font-extrabold text-yellow-800 mb-1 drop-shadow">Ankit Singh</h3>
+                            <p class="text-lg text-gray-700 mb-2">90 <span class="font-bold text-green-700 text-xl align-middle">%ile</span> <span class="text-sm text-gray-500">(2024-25)</span></p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+                                <span class="text-yellow-700 font-semibold">Well done, Ankit!</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Class 12 Toppers -->
-                <div class="bg-white bg-opacity-90 rounded-xl shadow-lg p-8 flex items-center gap-6 border-l-8 border-green-300">
-                    <div class="text-left">
-                        <h3 class="text-xl font-semibold text-green-800 mb-2">Class 12 Toppers (2024-25)</h3>
-                        <ul class="text-gray-700 text-left ml-4 flex flex-col gap-4">
-                            <li class="flex items-center gap-2">
-                                <span class="font-bold text-green-700">Ashutosh Kumar</span> – 97%
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="font-bold text-green-700">Varsha Rani</span> – 90%
-                            </li>
-                        </ul>
+                <div class="bg-gradient-to-r from-green-100 via-white to-blue-100 rounded-2xl shadow-2xl p-8 flex items-center gap-8 border-l-8 border-green-400 hover:shadow-green-200 transition-shadow duration-500">
+                    <div class="relative flex flex-col items-center gap-6">
+                        <!-- Ashutosh Kumar -->
+                        <div>
+                           
+                            <span class="block mt-2 bg-green-600 text-white text-xs px-3 py-1 rounded-full shadow font-semibold tracking-wide text-center">Class 12 Topper</span>
+                            <h3 class="text-xl font-extrabold text-green-800 mt-3 mb-1 drop-shadow text-center">Ashutosh Kumar</h3>
+                            <p class="text-base text-gray-700 mb-1 text-center">Score <span class="font-bold text-green-700 text-lg align-middle">97%</span> <span class="text-sm text-gray-500">(2024-25)</span></p>
+                            <div class="flex items-center justify-center gap-2 mt-1">
+                                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+                                <span class="text-green-700 font-semibold text-sm">Outstanding achievement!</span>
+                            </div>
+                        </div>
+                        <!-- Varsha Rani -->
+                        <div>
+                            <img src="image10.jpg" alt="Varsha Rani"
+        class="w-20 h-20 rounded-full object-cover border-4 border-green-400 shadow-lg ring-2 ring-green-100 bg-white mx-auto mb-2"
+        style="object-position: top center;">
+    <span class="block mt-2 bg-green-600 text-white text-xs px-3 py-1 rounded-full shadow font-semibold tracking-wide text-center"></span>
+    <h3 class="text-xl font-extrabold text-green-800 mt-3 mb-1 drop-shadow text-center">Varsa Rani</h3>
+    <p class="text-base text-gray-700 mb-1 text-center">Score <span class="font-bold text-green-700 text-lg align-middle">90%</span> <span class="text-sm text-gray-500">(2024-25)</span></p>
+    <div class="flex items-center justify-center gap-2 mt-1">
+        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+        <span class="text-green-700 font-semibold text-sm">Great result!</span>
+    </div>
+                        </div>
                     </div>
                 </div>
             </div>
