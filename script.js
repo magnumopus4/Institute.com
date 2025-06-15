@@ -152,10 +152,114 @@ function initFileUpload() {
 
 // Initialize all
 document.addEventListener('DOMContentLoaded', () => {
+    // Lighting overlay ko 1s baad hatao
+    setTimeout(() => {
+        const overlay = document.getElementById('lighting-overlay');
+        if (overlay) overlay.style.display = 'none';
+    }, 500);
+
+    // Custom loader ko 3s baad hatao
+    setTimeout(() => {
+        const loader = document.getElementById('custom-loader');
+        if (loader) {
+            loader.style.opacity = '0';
+            setTimeout(() => loader.style.display = 'none', 500); // fade out
+        }
+    }, 2500);
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('hidden');
+    });
+
     initSmoothScrolling();
     initTypingEffect();
     initCourseCardHover();
     initFeeToggle();
     initFileUpload();
     fetchUploadedFiles();
+});
+
+// Contact popup functions
+function showContact() {
+    document.getElementById('contact-number').classList.remove('hidden');
+}
+
+function hideContact() {
+    document.getElementById('contact-number').classList.add('hidden');
+}
+
+function animateSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.classList.remove('translate-y-20', 'opacity-0');
+        section.classList.add('translate-y-0', 'opacity-100');
+        // Scroll to section smoothly
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// Menu links ke liye event listener
+document.addEventListener('DOMContentLoaded', function() {
+    const coursesLink = document.querySelector('a[href="#courses"]');
+    if (coursesLink) {
+        coursesLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            animateSection('courses');
+        });
+    }
+    const teachersLink = document.querySelector('a[href="#teachers"]');
+    if (teachersLink) {
+        teachersLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            animateSection('teachers');
+        });
+    }
+});
+
+// Typewriter effect
+document.addEventListener('DOMContentLoaded', function() {
+    const text = "Empowering students for JEE, NEET, and CBSE, ICSE, JAC Boards (Classes 9-12)";
+    const typewriter = document.getElementById('typewriter');
+    if (typewriter) {
+        let i = 0;
+        typewriter.textContent = "";
+        function type() {
+            if (i < text.length) {
+                typewriter.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, 85);
+            }
+        }
+        type();
+    }
+});
+
+function showFee(feeId) {
+    const feeDiv = document.getElementById(feeId);
+    if (feeDiv.classList.contains('hidden')) {
+        feeDiv.classList.remove('hidden');
+    } else {
+        feeDiv.classList.add('hidden');
+    }
+}
+
+// Make sure this script is placed AFTER your nav HTML or at the end of <body>
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            navMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!navMenu.classList.contains('hidden') && !navMenu.contains(e.target) && e.target !== menuToggle) {
+                navMenu.classList.add('hidden');
+            }
+        });
+    }
 });
