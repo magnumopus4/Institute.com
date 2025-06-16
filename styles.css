@@ -1,16 +1,11 @@
 /* General Styles */
 body {
-    background: url('image2.png') no-repeat center center fixed;
+    background: none; /* Remove conflicting background */
     background-size: cover;
 }
 
 section[id] {
     scroll-margin-top: 80px; /* Offset for sticky navbar */
-}
-
-.hero-overlay {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1516321318423-f06f85e348b8') no-repeat center center/cover;
-    background-size: cover;
 }
 
 /* Navigation Link Hover Effect */
@@ -45,11 +40,13 @@ nav ul li a:hover::after {
     border-radius: 0.5rem;
 }
 
-#upload input, #upload select {
+#upload input,
+#upload select {
     transition: border-color 0.3s ease;
 }
 
-#upload input:focus, #upload select:focus {
+#upload input:focus,
+#upload select:focus {
     border-color: #1e40af; /* Tailwind's blue-700 */
     outline: none;
 }
@@ -87,4 +84,14 @@ nav ul li a:hover::after {
 
 .animate-light-flash {
     animation: lightFlash 1s ease-out forwards;
+}
+
+/* Ensure loader overlay is styled */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
 }
