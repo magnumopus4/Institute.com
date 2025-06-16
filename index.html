@@ -545,5 +545,25 @@
     <div id="loader-overlay" class="fixed inset-0 flex items-center justify-center bg-white z-50 hidden">
         <div class="loader"></div>
     </div>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            navMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!navMenu.classList.contains('hidden') && !navMenu.contains(e.target) && e.target !== menuToggle) {
+                navMenu.classList.add('hidden');
+            }
+        });
+    }
+});
+</script>
 </body>
 </html>
